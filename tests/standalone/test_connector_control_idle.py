@@ -43,11 +43,11 @@ def test_active_scheduling_never_queries_connector_control():
 def test_idle_work_follows_the_actual_multi_connector_release_queue():
     root = ROOT.parent
     impl_pending = method(
-        root / "LMCache-NPU/lmcache/integration/vllm/vllm_v1_adapter.py",
+        root / "LMCache/lmcache/integration/vllm/vllm_v1_adapter.py",
         "has_pending_control",
     )
     dynamic_pending = method(
-        root / "LMCache-NPU/lmcache/integration/vllm/lmcache_connector_v1.py",
+        root / "LMCache/lmcache/integration/vllm/lmcache_connector_v1.py",
         "has_pending_control",
     )
     multi_pending = method(
